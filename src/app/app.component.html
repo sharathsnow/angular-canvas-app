@@ -1,0 +1,23 @@
+<div class="container">
+  <button (click)="toggleTemplate()">Template</button>
+  <div *ngIf="showTemplate" class="template-container">
+    <app-image-upload (imageLoaded)="onImageLoaded($event)"></app-image-upload>
+    <app-canvas [images]="images"></app-canvas>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
+<!-- <div>
+  <button (click)="showTemplate()">Template</button>
+</div>
+
+<div *ngIf="showCanvas">
+  <div class="layout">
+    <div class="sidebar">
+      <app-image-upload (imageLoaded)="onImageLoaded($event)"></app-image-upload>
+    </div>
+    <div class="canvas-container">
+      <app-canvas [images]="images"></app-canvas>
+    </div>
+  </div>
+</div> -->
